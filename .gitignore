@@ -129,6 +129,3 @@ dmypy.json
 .pyre/
 raw_data/
 *.txt
-
-#ds store
-.DS_Store
