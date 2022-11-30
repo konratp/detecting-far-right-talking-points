@@ -1,0 +1,126 @@
+The final MEP dataframe consists of the following columns:
+full_name
+surname
+far_right (1 - far-right, 0 - non far-right) was assigned based on epg_name
+years (5-year period in the EU parliament)
+country_name
+national_party_family (availvable only for the half of the dataset)
+
+CAUTION: The encoding is not consistent the following columns, e.g. one party is labeled and is called
+differently accross the dataset:
+epg_code (European Parliament Group)
+epg_name
+national party_id
+national_party_name
+Use these collumns for manual validation only.
+
+
+ENCODINGS
+
+1)
+
+* epg_code vs epg_name (extracted from the dataset)
+
+{'A': ['Independents for a European of Nations',
+  'Europe of Democracies and Diversities'],
+ 'C': ['European Democrats'],
+ 'E': ["European People's Party",
+  "European People's Party-European Democrats"],
+ 'F': ['Forza Europa'],
+ 'G': ['Progressive European Democrats',
+  'European Democratic Alliance',
+  'Union for Europe',
+  'Union for a Europe of Nations'],
+ 'L': ['Liberal and Democratic Group',
+  'Liberal Democratic and Reform Group',
+  'European Liberal Democratic and Reform Party'],
+ 'M': ['Communist Group',
+  'European United Left/Nordic Green Left',
+  'European United Left'],
+ 'N': ['Technical Coordination of Democrats and Independents',
+  'Non-attached',
+  'Technical Group of Independents'],
+ 'O': ['Left Coalition'],
+ 'R': ['Technical Coordination of Democrats and Independents',
+  'Rainbow Group',
+  'European Radical Alliance'],
+ 'S': ['Socialist Group', 'Party of European Socialists'],
+ 'V': ['Green Group', 'Greens/European Free Alliance'],
+ 'X': ['European Right']}
+
+* epg_code vs far_right (created manually)
+
+{'A': 1,
+ 'C': 0,
+ 'E': 0,
+ 'F': 0,
+ 'G': 1,
+ 'L': 0,
+ 'M': 0,
+ 'O': 0,
+ 'N': 1,
+ 'R': 0,
+ 'S': 0,
+ 'V': 0,
+ 'X': 1}
+
+2) 
+
+* epg_code vs epg_name (created_manually)
+
+{'SOC' : "SOC", ## ?
+'S&D' : "The Progressive Alliance of Socialists and Democrats",
+'EPP-ED' : "European People's Party Group and European Democrats",
+'na' : 'NA',
+'ALDE' : "Alliance of Liberals and Democrats for Europe Party",
+'G/EFA' : "The Greens/European Free Alliance",
+'EUL/NGL' : "The Left in the European Parliament",
+'IND/DEM' : "Independence/Democracy",
+'UEN' : "Union for Europe of the Nations"}
+
+* epg_code vs far_right (created manually)
+
+{ 'SOC' : 0,
+'S&D' : 0,
+'EPP-ED' : 0,
+'na' : 0,
+'ALDE' : 0,
+'G/EFA' : 0,
+'EUL/NGL' : 0,
+'IND/DEM' : 1,
+'UEN' : 1}  
+                      
+
+3) 
+
+* epg_code vs epg_name (created_manually)
+
+'NI' : "Non-Inscrits",
+'S&D' : "The Progressive Alliance of Socialists and Democrats", 
+'EPP' : "European People's Party Group",
+'G–EFA' : "The Greens/European Free Alliance",
+'ECR' : "The European Conservatives and Reformists Group",
+'ALDE' : "Alliance of Liberals and Democrats for Europe Party",
+'NI/EFD' : "Non-Inscrits / Europe of Freedom and Democracy",   ## ??
+'EUL–NGL' : "The Left in the European Parliament",
+'EFD' : "Europe of Freedom and Democracy",
+'EUL-NGL' : "The Left in the European Parliament",
+'EUL/NGL' : "The Left in the European Parliament",
+'G-EFA' : "The Greens/European Free Alliance",
+'EPP-ED' : "European People's Party Group / European Democrats"}
+
+* epg_code vs far_right (created manually)
+{
+    'NI' : 0,
+    'S&D' : 0, 
+    'EPP' : 0,
+    'G–EFA' : 0,
+    'ECR' : 0,
+    'ALDE' : 0,
+    'NI/EFD' : 1,
+    'EUL–NGL' : 0,
+    'EFD' : 1,
+    'EUL-NGL' : 0,
+    'EUL/NGL' : 0,
+    'G-EFA' : 0,
+    'EPP-ED' : 0}
