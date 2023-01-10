@@ -5,6 +5,7 @@ __pycache__/
 
 # C extensions
 *.so
+*.csv
 
 # Distribution / packaging
 .Python
@@ -129,3 +130,6 @@ dmypy.json
 .pyre/
 raw_data/
 *.txt
+
+#other things to ignore:
+.DS_Store
