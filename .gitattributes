@@ -1,0 +1,2 @@
+#specify languages used in repository
+**.ipynb linguist-language=Python
