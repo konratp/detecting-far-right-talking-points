@@ -132,6 +132,7 @@ dmypy.json
 # Pyre type checker
 .pyre/
 raw_data/
+mep_data/
 *.txt
 
 #other things to ignore:
